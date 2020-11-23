@@ -44,13 +44,13 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() throws IOException, InvalidTokenException, AgentConnectException, ObsoleteVersionException {
 
-//        driver = new DriverBuilder<ChromeDriver>(new ChromeOptions())
-////                .withRemoteAddress(new URL("http://localhost:8585"))
-////                .withToken(devToken)
-////                .withProjectName("OrangeHRM").withJobName("orangeHRMJob")
-////                .build(ChromeDriver.class);
+        driver = new DriverBuilder<ChromeDriver>(new ChromeOptions())
+                .withRemoteAddress(new URL("http://localhost:8585"))
+                .withToken(devToken)
+                .withProjectName("OrangeHRM").withJobName("orangeHRMJob")
+                .build(ChromeDriver.class);
 
-        ChromeDriver driver = new ChromeDriver("j-cMljjJIjQ6zoXzyYIjhpz0PDyseiIyRXYKsqYzu_41",new ChromeOptions(), "OrangeHRM");
+
 
         //driver.navigate().to("https://the-internet.herokuapp.com/");
         driver.navigate().to(baseURL);
