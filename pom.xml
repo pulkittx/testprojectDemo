@@ -6,14 +6,18 @@
 
     <groupId>org.example</groupId>
     <artifactId>testproject</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>RestAPI</module>
+    </modules>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.testproject/java-sdk -->
         <dependency>
             <groupId>io.testproject</groupId>
             <artifactId>java-sdk</artifactId>
-            <version>0.63.4-RELEASE</version>
+            <version>0.64.4-RELEASE</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
