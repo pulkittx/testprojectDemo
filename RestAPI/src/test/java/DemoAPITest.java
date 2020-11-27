@@ -1,4 +1,3 @@
-import io.testproject.proxy.addon.RESTfulAPIClient;
 import io.testproject.sdk.drivers.GenericDriver;
 import io.testproject.sdk.internal.exceptions.AgentConnectException;
 import io.testproject.sdk.internal.exceptions.InvalidTokenException;
