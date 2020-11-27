@@ -30,7 +30,7 @@ import java.nio.charset.StandardCharsets;
 
 public class DemoAPITest {
 
-    @Test
+    //@Test
     public void demoApiTest() throws IOException, InvalidTokenException, AgentConnectException, ObsoleteVersionException {
         String projectName = "APIFirstProject";
         String projectJob = "APIFrstJob";
