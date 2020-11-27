@@ -12,13 +12,6 @@
     <artifactId>RestAPI</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>io.testproject</groupId>
-            <artifactId>proxy.addon.RESTfulAPIClient</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/../lib/RESTful-API-Client.proxy.jar</systemPath>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
