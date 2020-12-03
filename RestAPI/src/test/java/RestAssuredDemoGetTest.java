@@ -3,6 +3,7 @@ import io.restassured.http.Header;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,11 +23,6 @@ public class RestAssuredDemoGetTest {
         Response response = httpRequest.request(Method.GET, "v2/agents?_start=0&_limit=10");
 
         String responseBody = response.getBody().prettyPrint();
-        boolean statusCode = response.getStatusCode()==200;
-        Assert.assertTrue(statusCode);
-
-        System.out.println("Response body: "+ responseBody);
-
         JSONParser jsonParser = new JSONParser();
 
         JSONArray jsonArray = (JSONArray) jsonParser.parse(responseBody);
