@@ -60,7 +60,7 @@ public class BaseTest {
             caps.setCapability("os", "Windows");
             caps.setCapability("os_version", "10");
             caps.setCapability("browser", "Firefox");
-            //caps.setCapability("browser_version", "80");
+            caps.setCapability("browser_version", "80");
             caps.setCapability("name", "manikgupta5's First Test");
             caps.setCapability(
                     TestProjectCapabilityType.CLOUD_URL, cloudUrl);

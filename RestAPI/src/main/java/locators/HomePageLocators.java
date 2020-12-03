@@ -20,6 +20,6 @@ public class HomePageLocators extends BasePage {
     @FindBy(css = "input[placeholder='Search a Project']")
     protected WebElement searchAProjectInputFieldInMyProjectDropdown;
 
-    @FindBy()
+    @FindBy(xpath = "//div[contains(text(),'My Projects')]/../../div")
     protected WebElement filteredElementInMyProjectsDropDown;
 }

@@ -14,15 +14,22 @@ public class LoginPageWithChromeDriver extends LoginPageLocators {
         PageFactory.initElements(chromeDriver, this);
     }
 
-    public void setUserName(String userNameText) throws Throwable {
+    public LoginPageWithChromeDriver setUserName(String userNameText) throws Throwable {
         commonActions.typeKeys(userName, userNameText);
+        return this;
     }
 
-    public void setPassword(String passwordText) throws Throwable {
+    public LoginPageWithChromeDriver setPassword(String passwordText) throws Throwable {
         commonActions.typeKeys(password, passwordText);
+        return this;
     }
 
-    public void clickSignInButton() throws Throwable {
+    public HomePage clickSignInButton() throws Throwable {
         commonActions.click(signInButton);
+        return new HomePage(chromeDriver);
+    }
+
+    public HomePage login(String userName, String password) throws Throwable {
+        return setUserName(userName).setPassword(password).clickSignInButton();
     }
 }

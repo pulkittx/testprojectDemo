@@ -17,7 +17,8 @@ public class HomePage extends HomePageLocators {
         return commonActions.verifyElementIsDisplayed(homePageLogo);
     }
 
-    public void selectOptionInMyProjectDropdown(String optionText) throws Throwable {
+    public MyProjectDashBoard selectOptionInMyProjectDropdown(String optionText) throws Throwable {
         commonActions.selectOptionForNoSelectTag(myProjectsDropdown, searchAProjectInputFieldInMyProjectDropdown, filteredElementInMyProjectsDropDown, optionText);
+        return new MyProjectDashBoard(chromeDriver);
     }
 }
