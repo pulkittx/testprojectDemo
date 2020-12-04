@@ -21,4 +21,13 @@ public class HomePage extends HomePageLocators {
         commonActions.selectOptionForNoSelectTag(myProjectsDropdown, searchAProjectInputFieldInMyProjectDropdown, filteredElementInMyProjectsDropDown, optionText);
         return new MyProjectDashBoard(chromeDriver);
     }
+
+    public void hoverOverProjectMenuBar(String name) throws Throwable {
+        commonActions.hoverOver(projectMenuBar(name));
+
+    }
+
+    public void selectProjectFromMenuBar(String value) throws Throwable {
+        commonActions.click(projectNameFromMenuBar(value));
+    }
 }

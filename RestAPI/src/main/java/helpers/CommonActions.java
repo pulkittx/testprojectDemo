@@ -4,6 +4,7 @@ import helper.ConsoleLog;
 import io.testproject.sdk.drivers.web.ChromeDriver;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -62,5 +63,16 @@ public class CommonActions {
     public boolean verifyElementIsDisplayed(WebElement element) throws Throwable {
         verifyIsElementVisible(element);
         return element.isDisplayed();
+    }
+
+    public void hoverOver(WebElement element) {
+
+        try {
+            wait.until(ExpectedConditions.visibilityOf(element));
+            (new Actions(this.driver)).moveToElement(element).perform();
+
+        } catch (Exception e) {
+            ConsoleLog.info("Hover over element did not work as expected." + element);
+        }
     }
 }
